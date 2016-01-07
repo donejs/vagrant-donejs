@@ -69,6 +69,6 @@ The file path character limit on Windows. This happens quite often if you are us
 * This Gitub reposotory is linked to the public [Juke/DoneJS](https://atlas.hashicorp.com/Juke/boxes/DoneJS) Box.
 * Automatically rebuild this Box when commit changes
 * Using Packer v.0.9.0-rc1
-* Current Juke/DoneJS Box Version: 1.0.1
+* Current Juke/DoneJS Box Version: 1.0.6
 
 
