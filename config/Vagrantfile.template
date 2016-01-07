@@ -1,0 +1,51 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "Juke/DoneJS"
+
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # `vagrant box outdated`. This is not recommended.
+  # config.vm.box_check_update = false
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # - http-server port forwarding
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  # - gulp-livereload port forwarding
+  config.vm.network "forwarded_port", guest: 35729, host: 35729
+  # MongoDB
+  config.vm.network "forwarded_port", guest: 27017, host: 27017
+
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  config.vm.network "private_network", ip: "192.168.33.10"
+
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Configure A Few VirtualBox Settings
+  config.vm.provider :virtualbox do |v, override|
+    v.name = "donejs"
+    v.customize ["modifyvm", :id, "--memory", 2048]
+    v.customize ["modifyvm", :id, "--cpus", 1]
+  end
+
+  # Configure A Few VMware Settings
+  ["vmware_fusion", "vmware_workstation"].each do |vmware|
+    config.vm.provider vmware do |v|
+      v.vmx["displayName"] = "donejs"
+      v.vmx["memsize"] = 2048
+      v.vmx["numvcpus"] = 1
+    end
+  end
+end
