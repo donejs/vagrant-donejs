@@ -1,24 +1,24 @@
-## A DoneJS development environment
+# A DoneJS development environment
 
 This Vagrant-Box supports **Virtualbox** and **VMWare**.
 
-#### The box comes with Ubuntu-14.04.3 LTS and provides:
+## The box comes with Ubuntu-14.04.3 LTS and provides:
 * Git v.1.9.1
 * MongoDB v.3.2.0
 * NodeJS v.0.12.x
 * Gulp v.3.9.x + Gulp-Livereload v.3.8.x
 * Yoeman v.1.5.x
 * Http-Server
-* Steal-tools v.0.13.x
 
-#### The following configurations are set as default:
+
+## The following configurations are set as default:
 * port forwarding 8080 -> 8080 for *http-server*
 * port forwarding 35729 -> 35729 for *gulp-livereload*
 * port forwarding 27017 -> 27017 for *MongoDB*
 * The guest machine has the static IP **192.168.33.10**
 
 
-#### Install and Setup
+## Install and Setup
 *This setup is done with VirtualBox 5.0.10 and Vagrant 1.8.1 both on Windows 10*
 
 **Provision**  
@@ -57,7 +57,7 @@ Add a new connection in MongoChef:
 ***Security Note: For easy connection between guest and host system, MongoDB is listen on all interfaces.***
 
 
-#### Limitations
+## Limitations
 **Symbolic Links**  
 Support for symbolic links across synced folder implementations and host/guest combinations is not consistent. Vagrant does its best to make sure symbolic links work by configuring various hypervisors (such as VirtualBox), but some host/guest combinations still do not work properly. This can affect some development environments that rely on symbolic links.
 
@@ -65,10 +65,8 @@ Support for symbolic links across synced folder implementations and host/guest c
 The file path character limit on Windows. This happens quite often if you are using a node module with long name.
 
 
-#### Internals
+## Internals
 * This Gitub reposotory is linked to the public [Juke/DoneJS](https://atlas.hashicorp.com/Juke/boxes/DoneJS) Box.
 * Automatically rebuild this Box when commit changes
 * Using Packer v.0.9.0-rc1
-* Current Juke/DoneJS Box Version: 1.0.6
-
-
+* Current Juke/DoneJS Box Version: 1.0.7

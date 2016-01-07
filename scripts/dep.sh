@@ -25,6 +25,5 @@ apt-get install -y nodejs
 
 echo "Install global depencencies"
 npm install -g gulp@3.9.x gulp-watch@4.3.x gulp-util@3.0.x gulp-livereload@3.8.x
-# npm install -g steal-tools@0.13.x
 npm install -g yo@1.5.x generator-donejs@0.4.x
 npm install -g http-server
