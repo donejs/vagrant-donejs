@@ -20,6 +20,7 @@ This Vagrant-Box supports **Virtualbox** and **VMWare**.
 
 #### Install and Setup
 *This setup is done with VirtualBox 5.0.10 and Vagrant 1.8.1 both on Windows 10*
+
 **Provision**
 First at all, download and install [**VirtualBox**](https://www.virtualbox.org/) and [**Vagrant**](https://www.vagrantup.com/). Once VirtualBox and Vagrant have been installed, you should add the DoneJS box to your Vagrant installation.
 
@@ -50,7 +51,9 @@ To connect to your DoneJS environment via SSH, enter the `vagrant ssh` command i
 MongoDB is part of the DoneJS development environment. The MongoDB Server is running if you start the Vagrant Box.
 To connect to the MongoDB Server i using [**MongoChef**](http://3t.io/mongochef/).
 Add a new connection in MongoChef:
+
 **Server:** localhost
+
 **Port:** 27017
 
 ***Security Note: For easy connection between guest and host system, MongoDB is listen on all interfaces.***
