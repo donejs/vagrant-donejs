@@ -5,15 +5,16 @@ This Vagrant-Box supports **Virtualbox** and **VMWare**.
 ## The box comes with Ubuntu-14.04.3 LTS and provides:
 * Git v.1.9.1
 * MongoDB v.3.2.0
-* NodeJS v.0.12.x
+* NodeJS v.5.x
 * Gulp v.3.9.x + Gulp-Livereload v.3.8.x
 * Yoeman v.1.5.x
-* Http-Server
+* DoneJS v.0.6.x
 
 
 ## The following configurations are set as default:
-* port forwarding 8080 -> 8080 for *http-server*
+* port forwarding 8080 -> 8080 for *http-server* or [*can-ssr*](http://canjs.github.io/can-ssr/doc/)
 * port forwarding 35729 -> 35729 for *gulp-livereload*
+* port forwarding 8012 -> 8012 for [*steal-live-reload*](http://stealjs.com/docs/steal.live-reload.html)
 * port forwarding 27017 -> 27017 for *MongoDB*
 * The guest machine has the static IP **192.168.33.10**
 
@@ -69,4 +70,4 @@ The file path character limit on Windows. This happens quite often if you are us
 * This Gitub reposotory is linked to the public [Juke/DoneJS](https://atlas.hashicorp.com/Juke/boxes/DoneJS) Box.
 * Automatically rebuild this Box when commit changes
 * Using Packer v.0.9.0-rc1
-* Current Juke/DoneJS Box Version: 1.0.7
+* Current Juke/DoneJS Box Version: 2.0.0

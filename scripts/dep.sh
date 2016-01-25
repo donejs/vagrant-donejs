@@ -19,11 +19,12 @@ service mongod stop
 echo "Installing Git"
 apt-get install git -y > /dev/null
 
-echo "Installing Node 0.12.x"
-curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+echo "Installing Nodejs v5"
+curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 apt-get install -y nodejs
 
 echo "Install global depencencies"
 npm install -g gulp@3.9.x gulp-watch@4.3.x gulp-util@3.0.x gulp-livereload@3.8.x
-npm install -g yo@1.5.x generator-donejs@0.4.x
 npm install -g http-server
+npm install -g yo@1.5.x
+npm install -g donejs@0.6.x
