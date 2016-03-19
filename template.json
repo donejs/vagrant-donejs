@@ -42,8 +42,8 @@
             "inline": ["mkdir /home/vagrant/.npm_lazy_config"]
         },{
             "type": "file",
-            "source": "config/npm_lazy/npm_lazy.config.conf",
-            "destination": "/home/vagrant/.npm_lazy_config/npm_lazy.config.conf"
+            "source": "config/npm_lazy/npm_lazy.config.js",
+            "destination": "/home/vagrant/.npm_lazy_config/npm_lazy.config.js"
         },{
             "type": "file",
             "source": "config/npm_lazy/npm_lazy.sh",
@@ -124,7 +124,7 @@
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "vmware_desktop",
-                "version": "3.0.1"
+                "version": "3.0.2"
             }
         },
         {
@@ -134,7 +134,7 @@
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "virtualbox",
-                "version": "3.0.1"
+                "version": "3.0.2"
             }
         }]
     ]
