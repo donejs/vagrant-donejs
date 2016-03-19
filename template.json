@@ -34,6 +34,23 @@
         },{
             "type": "shell",
             "inline": ["sudo mv /tmp/mongod.conf /etc/mongod.conf && sudo chown root:root /etc/mongod.conf"]
+        },{
+            "type": "shell",
+            "inline": ["cd ~ && npmrc -c local && npm set registry http://127.0.0.1:5080 && npmrc local"]
+        },{
+            "type": "shell",
+            "inline": ["mkdir /home/vagrant/.npm_lazy_config"]
+        },{
+            "type": "file",
+            "source": "config/npm_lazy/npm_lazy.config.conf",
+            "destination": "/home/vagrant/.npm_lazy_config/npm_lazy.config.conf"
+        },{
+            "type": "file",
+            "source": "config/npm_lazy/npm_lazy.sh",
+            "destination": "/home/vagrant/.npm_lazy_config/npm_lazy.sh"
+        },{
+            "type": "shell",
+            "inline": ["sudo sed -i -e '$i \nohup sh /home/vagrant/.npm_lazy_config/npm_lazy.sh &\n' /etc/rc.local"]
         }
     ],
     "builders": [
@@ -107,7 +124,7 @@
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "vmware_desktop",
-                "version": "3.0.0"
+                "version": "3.0.1"
             }
         },
         {
@@ -117,7 +134,7 @@
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "virtualbox",
-                "version": "3.0.0"
+                "version": "3.0.1"
             }
         }]
     ]

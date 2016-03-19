@@ -37,5 +37,5 @@ This Vagrant-Box supports **Virtualbox** and **VMWare**.
 ## Internals
 * This Gitub reposotory is linked to the public [Juke/DoneJS](https://atlas.hashicorp.com/Juke/boxes/DoneJS) Box.
 * Automatically rebuild this Box when commit changes
-* Using Packer v.0.9.0-rc1
-* Current Juke/DoneJS Box Version: 3.0.0
+* Using Packer v.0.9.0
+* Current Juke/DoneJS Box Version: 3.0.1
