@@ -10,7 +10,7 @@ module.exports = {
 		logToFile: false,
 
 		// This should be a file path.
-		filename: homePath + '/npm_lazy.log'
+		filename: '/home/vagrant/npm_lazy.log'
 	},
 
 	// Cache config
@@ -20,7 +20,7 @@ module.exports = {
 	// Note: Since any relative path is resolved relative to the current working
 	// directory when the server is started, you should use a full path.
 
-	cacheDirectory: homePath + '/.npm_lazy',
+	cacheDirectory: '/home/vagrant/.npm_lazy',
 
 	// `cacheAge`: maximum age before an index is refreshed from remoteUrl
 	// - negative value means no refresh (e.g. once cached, never update the package.json metadata)
