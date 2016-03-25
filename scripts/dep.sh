@@ -13,23 +13,23 @@ apt-get -y install curl
 
 # You can install anything you need here.
 
-echo "Installing Wine"
+echo "---- Installing Wine"
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-apt-get install ttf-mscorefonts-installer
-apt-get install wine
+apt-get -y install ttf-mscorefonts-installer
+apt-get -y install wine
 
-# echo "Installing MongoDB 3.2.0"
+# echo "---- Installing MongoDB 3.2.0"
 # apt-get install -y mongodb-org=3.2.0 mongodb-org-server=3.2.0 mongodb-org-shell=3.2.0 mongodb-org-mongos=3.2.0 mongodb-org-tools=3.2.0
 # service mongod stop
 
-echo "Installing Git"
+echo "---- Installing Git"
 apt-get install git -y > /dev/null
 
-echo "Installing Nodejs v5"
+echo "---- Installing Nodejs v5"
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 apt-get install -y nodejs
 
-echo "Install global Nodejs depencencies"
+echo "---- Install global Nodejs depencencies"
 npm install -g npm_lazy
 npm install -g npmrc
 npm install -g jshint
