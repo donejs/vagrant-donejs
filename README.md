@@ -12,9 +12,15 @@ This Vagrant-Box supports **Virtualbox** and **VMWare**.
 * watchalive
 
 ### Pre-installed node modules
-* Gulp v.3.9.x + Gulp-Livereload v.3.8.x
-* Yoeman v.1.5.x
-* DoneJS v.0.7.x
+* JShint 
+* Gulp v.3.9.x
+    * Gulp-Livereload v.3.8.x
+    * Gulp-Jshint v.2.0.x
+    * Gulp-CSSlint v.0.2.x
+* Yoeman v.1.7.x
+* [Mocha](https://mochajs.org) + [Chai](http://chaijs.com/)
+* [Zombie](http://zombie.js.org/)
+* DoneJS v.0.8.x
 * Steal-tools v.0.15.x
 
 
@@ -38,4 +44,4 @@ This Vagrant-Box supports **Virtualbox** and **VMWare**.
 * This Gitub reposotory is linked to the public [Juke/DoneJS](https://atlas.hashicorp.com/Juke/boxes/DoneJS) Box.
 * Automatically rebuild this Box when commit changes
 * Using Packer v.0.9.0
-* Current Juke/DoneJS Box Version: 3.1.1
+* Current Juke/DoneJS Box Version: 3.2.0

@@ -32,10 +32,13 @@ apt-get install -y nodejs
 echo "Install global Nodejs depencencies"
 npm install -g npm_lazy
 npm install -g npmrc
-npm install -g gulp@3.9.x gulp-watch@4.3.x gulp-util@3.0.x gulp-livereload@3.8.x
+npm install -g jshint
+npm install -g gulp@3.9.x gulp-watch@4.3.x gulp-util@3.0.x gulp-livereload@3.8.x gulp-jshint@2.0.x gulp-csslint@0.2.x
 npm install -g http-server
 npm install -g watchalive
+npm install -g mocha chai
+npm install -g zombie@4.2.x
 npm install -g done-serve@0.1.x
-npm install -g yo@1.5.x
-npm install -g donejs@0.7.x
+npm install -g yo@1.7.x
+npm install -g donejs@0.8.x
 npm install -g steal-tools@0.15.x
