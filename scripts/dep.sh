@@ -18,6 +18,27 @@ echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select tr
 apt-get -y install ttf-mscorefonts-installer
 apt-get -y install wine
 
+echo "---- Installing OpenJDK"
+apt-get -y install openjdk-7-jdk
+# adb
+apt-get -y install libc6:i386 libstdc++6:i386
+# aapt
+apt-get -y install zlib1g:i386
+
+
+echo "---- Installing Android SDK"
+wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz -P /home/vagrant
+# as vagrant user
+su vagrant -l -c 'cd /home/vagrant && tar -xvf android-sdk_r24.4.1-linux.tgz && cd android-sdk-linux/tools && ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | ./android update sdk --no-ui'
+# add paths
+echo $'\n\nexport ANDROID_HOME=$HOME/android-sdk-linux' >> /home/vagrant/.bashrc
+echo $'\nPATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools\n' >> /home/vagrant/.bashrc
+su vagrant -l -c 'source /home/vagrant/.bashrc'
+
+#### export ANDROID_HOME=$HOME/android-sdk-linux
+#### export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+### --filter platform-tool,android-19,sysimg-19,build-tools-19.0.1
+
 # echo "---- Installing MongoDB 3.2.0"
 # apt-get install -y mongodb-org=3.2.0 mongodb-org-server=3.2.0 mongodb-org-shell=3.2.0 mongodb-org-mongos=3.2.0 mongodb-org-tools=3.2.0
 # service mongod stop
@@ -42,3 +63,4 @@ npm install -g done-serve@0.1.x
 npm install -g yo@1.7.x
 npm install -g donejs@0.8.x
 npm install -g steal-tools@0.15.x
+npm install -g cordova ionic

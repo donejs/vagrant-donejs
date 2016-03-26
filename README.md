@@ -23,6 +23,9 @@ This Vagrant-Box supports **Virtualbox** and **VMWare**.
 * DoneJS v.0.8.x
 * Steal-tools v.0.15.x
 
+### Pre-installed stuff for App-Development
+* Cordova
+
 
 ## The following configurations are set as default:
 * port forwarding 8080 -> 8080 for [*http-server*](https://www.npmjs.com/package/http-server)
@@ -44,4 +47,4 @@ This Vagrant-Box supports **Virtualbox** and **VMWare**.
 * This Gitub reposotory is linked to the public [Juke/DoneJS](https://atlas.hashicorp.com/Juke/boxes/DoneJS) Box.
 * Automatically rebuild this Box when commit changes
 * Using Packer v.0.9.0
-* Current Juke/DoneJS Box Version: 3.2.1
+* Current Juke/DoneJS Box Version: 3.2.2

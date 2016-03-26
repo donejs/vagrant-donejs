@@ -68,7 +68,7 @@
             ],
             "headless": true,
             "boot_wait": "10s",
-            "disk_size": 20480,
+            "disk_size": 25480,
             "guest_os_type": "Ubuntu_64",
             "http_directory": "http",
             "iso_checksum": "07e4bb5569814eab41fafac882ba127893e3ff0bdb7ec931c9b2d040e3e94e7a",
@@ -95,7 +95,7 @@
                 "initrd=/install/initrd.gz -- <enter>"
             ],
             "boot_wait": "10s",
-            "disk_size": 20480,
+            "disk_size": 25480,
             "guest_os_type": "Ubuntu-64",
             "headless": true,
             "http_directory": "http",
@@ -125,7 +125,7 @@
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "vmware_desktop",
-                "version": "3.2.1"
+                "version": "3.2.2"
             }
         },
         {
@@ -135,7 +135,7 @@
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "virtualbox",
-                "version": "3.2.1"
+                "version": "3.2.2"
             }
         }]
     ]
