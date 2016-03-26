@@ -31,7 +31,7 @@ wget http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz -P /home/vagrant
 # as vagrant user
 su vagrant -l -c 'cd /home/vagrant && tar -xvf android-sdk_r24.4.1-linux.tgz'
 rm /home/vagrant/android-sdk_r24.4.1-linux.tgz
-su vagrant -l -c 'cd /home/vagrant/android-sdk-linux/tools && ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | ./android update sdk --no-ui'
+su vagrant -l -c 'cd /home/vagrant/android-sdk-linux/tools && ( sleep 5 && while [ 1 ]; do sleep 1; echo y; done ) | ./android update sdk -u --all --filter platform-tool,android-19,android-20,android-21,android-22,android-23,build-tools-23.0.3'
 # add paths
 echo $'\n\nexport ANDROID_HOME=$HOME/android-sdk-linux' >> /home/vagrant/.bashrc
 echo $'\nPATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools\n' >> /home/vagrant/.bashrc
